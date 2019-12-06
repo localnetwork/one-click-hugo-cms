@@ -1,0 +1,20 @@
+// Font Weight
+$font-weights: (100,300,400,500,600,700,900);
+@each $i in $font-weights {
+    .fw#{$i} {
+        font-weight: $i;
+    }
+}
+
+// FONT SIZES default from 0 to 100
+
+@for $i from 0 through 100 {
+    .fs#{$i} {font-size: #{$i}px!important; }
+    // RESPONSIVE PATTERN .fs(value)-(breakpoint)
+    // fontsizeclass(value/number)-(breakpoint) 
+    @each $breakpoint, $value in $min-breakpoints {
+        @media (min-width : #{$value}) {
+            .fs#{$i}-#{$breakpoint} { font-size: #{$i}px !important; }
+        }
+    }
+}

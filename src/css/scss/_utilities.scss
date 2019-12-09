@@ -11,10 +11,32 @@ $font-weights: (100,300,400,500,600,700,900);
 @for $i from 0 through 100 {
     .fs#{$i} {font-size: #{$i}px!important; }
     // RESPONSIVE PATTERN .fs(value)-(breakpoint)
-    // fontsizeclass(value/number)-(breakpoint) 
+    // fontsizeclass(value/number)-(breakpoint)
     @each $breakpoint, $value in $min-breakpoints {
         @media (min-width : #{$value}) {
             .fs#{$i}-#{$breakpoint} { font-size: #{$i}px !important; }
         }
     }
 }
+
+
+
+
+
+@for $i from 1 through 12 {
+    .col-#{i} {
+        max-width: #{$i} * 100 / 12; 
+    }
+    // RESPONSIVE PATTERN .fs(value)-(breakpoint)
+    // fontsizeclass(value/number)-(breakpoint)
+    @each $breakpoint, $value in $min-breakpoints {
+        @media (min-width : #{$value}) {
+            .col-#{$breakpoint}-#{$i} {
+
+            }
+        }
+    }
+}
+
+
+

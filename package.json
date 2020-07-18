@@ -74,7 +74,7 @@
   },
   "homepage": "https://github.com/netlify/victor-hugo#readme",
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   },
   "keywords": []
 }
